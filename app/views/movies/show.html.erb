@@ -1,0 +1,18 @@
+<h1><%= @movie.title %><h1>
+
+<ul>
+  <li><%= @movie.plot %></li>
+  <li><%= @movie.mpaa_rating %></li>
+</ul>
+
+<form action="/movies" method="post">
+  <input type="hidden" name="title" value="<%= @movie.title %>">
+   <input type="hidden" name="favorite" value="false">
+  <button>Save</button>
+</form>
+
+<form action="/movies" method="post">
+  <input type="hidden" name="title" value="<%= @movie.title %>">
+  <input type="hidden" name="favorite" value="true">
+  <button>Save and fave</button>
+</form>

@@ -1,0 +1,20 @@
+<h1>Search for a movie<h1>
+
+<form action="/movies" method="get">
+  <input type="string" name="name">
+  <button>Search</button>
+</form>
+
+</br>
+<h3>Favorites<h3>
+<ul>
+  <% @faves.each do |fave| %>
+  <li><a href="/movies/<%= fave.name %>"><%= fave.name %></a></li>
+    <ul>
+      <li><%= fave.plot %></li>
+      <li><%= fave.mpaa %></li>
+      <li><%= fave.rating %></li>
+    </ul>
+  </br>
+  <% end %>
+</ul>
