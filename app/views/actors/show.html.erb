@@ -1,0 +1,8 @@
+<h1>Actors</h1>
+
+<ul>
+<%= @movie.cast_members.each do |member| %>
+  <li> <%= member %>
+  </li>
+  <% end %>
+</ul>

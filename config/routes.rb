@@ -4,7 +4,7 @@ root :to => 'movies#index'
 
 get '/movies' => 'movies#movies'
 
-get '/movies/:id' => 'movies#show', as: 'show_movie'
+get '/movies/:id' => 'movies#show'
 
 post '/movies' => 'movies#create'
 
@@ -18,4 +18,8 @@ post '/movies' => 'movies#create'
 #            PATCH  /movies/:id(.:format)      movies#update
 #            PUT    /movies/:id(.:format)      movies#update
 #            DELETE /movies/:id(.:format)      movies#destroy
+
+
+####ACTORS
+get '/actors' => 'actors#show'
 end
